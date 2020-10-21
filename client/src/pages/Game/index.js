@@ -1,5 +1,9 @@
 import React, {Component, useEffect} from "react";
 import Phaser from "phaser";
+import background from "./images/tut/background.png";
+import dragon from "./images/tut/pet_dragon_new.png";
+import icon from "./images/tut/icon.png";
+import warrior from "./images/tut/warrior.png";
 
 export const Game = () => {
   useEffect(() => {
@@ -30,10 +34,10 @@ export const Game = () => {
 
     scene.preload = function () {
       // lets preload some ../../images that we can use in our game
-      this.load.image("background", "../images/tut/background.png");
-      this.load.image("player", "../images/tut/warrior.png");
-      this.load.image("dragon", "../images/tut/pet_dragon_new.png");
-      this.load.image("gold", "../images/tut/icon.png");
+      this.load.image("background", background);
+      this.load.image("player", warrior);
+      this.load.image("dragon", dragon);
+      this.load.image("gold", icon);
     };
 
     scene.create = function () {
