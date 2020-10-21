@@ -1,4 +1,4 @@
-# Create React Express App
+# Using Phaser with Create React Express App
 
 ## About This Boilerplate
 
