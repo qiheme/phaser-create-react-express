@@ -1,5 +1,6 @@
 import React, {Component, useEffect} from "react";
 import Phaser from "phaser";
+import {Link} from "react-router-dom";
 import background from "./images/tut/background.png";
 import dragon from "./images/tut/pet_dragon_new.png";
 import icon from "./images/tut/icon.png";
@@ -117,6 +118,15 @@ export const Game = () => {
         this.create();
       }
     };
+    return function cleanup() {
+      console.log("clean");
+      console.log(game);
+      game.destroy(true);
+    };
   }, []);
-  return <div className="Game"></div>;
+  return (
+    <div className="Game">
+      <Link to="/">HOME</Link>
+    </div>
+  );
 };
